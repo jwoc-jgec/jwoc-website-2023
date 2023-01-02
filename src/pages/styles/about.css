@@ -1,11 +1,11 @@
 section#about {
     width: 100%;
     padding: 10%;
-
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url('../../assets/about_bg_dark.svg');
     background-position: center;
+    margin-top: -5px;
 }
 
 #about .heading h1 {
@@ -75,7 +75,13 @@ section#about {
     padding: 2rem;
     font-size: 1.2rem;
     text-align: justify;
-    color: #fff
+    color: #fff;
+    /* margin-bottom: 1rem; */
+}
+
+.about-card p button {
+    display: block;
+    margin-top: 1rem;
 }
 
 
@@ -90,6 +96,8 @@ section#about {
 }
 
 .devider {
+    display: flex;
+    justify-content: center;
     position: absolute;
     top: -10px;
     left: 0;
@@ -127,7 +135,8 @@ section#about {
     flex-wrap: wrap;
     width: 100%;
 }
-.info-card{
+
+.info-card {
     margin: 2rem 0rem;
     display: flex;
     flex-direction: column;
@@ -136,6 +145,12 @@ section#about {
     text-align: center;
     padding: 1rem;
     margin: 1rem;
+}
+
+.info-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem 0rem;
 }
 
 .info-container h1 {
@@ -154,4 +169,50 @@ section#about {
     100% {
         transform: rotate(360deg);
     }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #about .heading h1 {
+        font-size: 2rem !important;
+        position: relative;
+        text-align: center;
+        display: inline-block;
+        margin: auto;
+    }
+
+    section#about {
+        padding: 10% 0% !important;
+    }
+
+    .about-card h2 {
+        font-size: 1.5rem !important;
+
+    }
+
+    .about-card p {
+        font-size: 1rem !important;
+        padding: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .about-card,
+    .info-container {
+        margin: 0 !important;
+    }
+
+    .about-container {
+        margin-top: 15px;
+        width: 100% !important;
+        padding: .5rem !important;
+    }
+
+    .about-card {
+        padding: 1rem !important;
+    }
+
+    .about-container::before {
+        display: none;
+    }
+
 }
